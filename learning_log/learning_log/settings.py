@@ -1,3 +1,11 @@
+'''
+@Description: 
+@Version: 1.0
+@Autor: Henggao
+@Date: 2020-03-18 16:04:53
+@LastEditors: Henggao
+@LastEditTime: 2020-03-18 18:47:04
+'''
 """
 Django settings for learning_log project.
 
@@ -37,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 我的应用程序
+    'learning_logs'
 ]
 
 MIDDLEWARE = [
