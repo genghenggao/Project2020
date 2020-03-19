@@ -1,3 +1,11 @@
+'''
+@Description: 
+@Version: 1.0
+@Autor: Henggao
+@Date: 2020-03-18 16:04:53
+@LastEditors: Henggao
+@LastEditTime: 2020-03-19 16:56:03
+'''
 """learning_log URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,9 +21,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
+
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(r'', include(('learning_logs.urls', "learning_logs"),
+                      namespace='learning_logs'))
 ]

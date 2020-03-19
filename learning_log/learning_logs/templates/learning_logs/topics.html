@@ -1,0 +1,26 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: Henggao
+ * @Date: 2020-03-19 17:38:57
+ * @LastEditors: Henggao
+ * @LastEditTime: 2020-03-19 18:36:04
+ -->
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+  <p>Topics</p>
+
+  <ul>
+      {% for topic in topics %}
+        <!-- <li>{{ topic}}</li> -->
+        <li>
+          <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+          </li>
+      {% empty %}
+        <li>No topics have been added yet.</li>
+      {% endfor %}
+  </ul>
+
+{% endblock content %}
