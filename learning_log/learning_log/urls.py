@@ -4,7 +4,7 @@
 @Autor: Henggao
 @Date: 2020-03-18 16:04:53
 @LastEditors: Henggao
-@LastEditTime: 2020-03-19 16:56:03
+@LastEditTime: 2020-04-22 14:50:35
 '''
 """learning_log URL Configuration
 
@@ -25,9 +25,11 @@ Including another URLconf
 from django.contrib import admin
 
 from django.urls import path, include
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^users/',include('users.urls',namespace='users')),
     path(r'', include(('learning_logs.urls', "learning_logs"),
                       namespace='learning_logs'))
 ]

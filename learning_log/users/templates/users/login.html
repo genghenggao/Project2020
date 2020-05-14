@@ -1,0 +1,20 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: Henggao
+ * @Date: 2020-04-22 13:19:44
+ * @LastEditors: Henggao
+ * @LastEditTime: 2020-04-22 14:58:57
+ -->
+{% extends "learning_logs/base.html" %}
+{% block content %}
+    {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    <form method="post" action="{% url 'users:login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">log in</button>
+        <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+    </form>
+{% endblock content %}

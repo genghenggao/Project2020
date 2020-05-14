@@ -4,7 +4,7 @@
  * @Autor: Henggao
  * @Date: 2020-03-19 17:38:57
  * @LastEditors: Henggao
- * @LastEditTime: 2020-03-19 18:36:04
+ * @LastEditTime: 2020-04-19 12:18:20
  -->
 {% extends "learning_logs/base.html" %}
 
@@ -22,5 +22,7 @@
         <li>No topics have been added yet.</li>
       {% endfor %}
   </ul>
+
+  <a href="{% url 'learning_logs:new_topics'%}">Add a new topic:</a>
 
 {% endblock content %}

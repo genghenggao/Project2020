@@ -4,7 +4,7 @@
 @Autor: Henggao
 @Date: 2020-03-18 16:04:53
 @LastEditors: Henggao
-@LastEditTime: 2020-03-18 18:47:04
+@LastEditTime: 2020-04-22 12:45:19
 '''
 """
 Django settings for learning_log project.
@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 我的应用程序
-    'learning_logs'
+    'learning_logs',
+    'users',
 ]
 
 MIDDLEWARE = [

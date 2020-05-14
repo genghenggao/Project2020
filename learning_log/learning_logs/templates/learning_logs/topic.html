@@ -4,7 +4,7 @@
  * @Autor: Henggao
  * @Date: 2020-03-19 18:22:45
  * @LastEditors: Henggao
- * @LastEditTime: 2020-03-19 18:29:26
+ * @LastEditTime: 2020-04-20 15:33:57
  -->
 {% extends "learning_logs/base.html" %}
 
@@ -13,11 +13,17 @@
  <p>Topic: {{ topic}}</p>
 
  <p>Entries:</p>
+ <p>
+     <a href="{% url 'learning_logs:new_entry' topic.id %}">add new entry</a>
+ </p>
  <ul>
      {%for entry in entries %}
         <li>
             <p>{{ entry.date_added|date:'M d, Y H:i'}}</p>
             <p>{{ entry.text|linebreaks }}</p>
+            <p>
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}">edit entry</a>
+            </p>
         </li>
     {% empty %}
         <li>

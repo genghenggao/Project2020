@@ -1,0 +1,21 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: Henggao
+ * @Date: 2020-04-19 11:40:04
+ * @LastEditors: Henggao
+ * @LastEditTime: 2020-04-19 12:26:33
+ -->
+
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+ <p>Add a new topic: </p>
+
+ <form action="{% url 'learning_logs:new_topic' %}"  method="POST">
+     {% csrf_token %}
+     {{ form.as_p}}
+     <button name="submit">add topic</button>
+ </form>
+
+ {% endblock content %}
